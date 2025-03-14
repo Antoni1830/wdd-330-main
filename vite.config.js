@@ -1,4 +1,4 @@
-import { resolve } from "path";
+pnpimport { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
