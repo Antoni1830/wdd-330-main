@@ -38,3 +38,4 @@ function cartItemTemplate(item) {
 
 calculateTotalPrice();
 renderCartContents();
+
