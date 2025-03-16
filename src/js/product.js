@@ -13,7 +13,7 @@ import ProductData from "./ProductData.mjs";
 
 const dataSource = new ProductData("tents");
 
-AAJR--individual1
+
 const product = new ProductDetails(productId, dataSource);
 product.init();
 
