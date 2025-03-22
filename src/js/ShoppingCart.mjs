@@ -50,4 +50,3 @@ export default class ShoppingCart {
     document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
   }
 }
-
