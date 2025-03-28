@@ -1,19 +1,20 @@
+import CheckoutProcess from "./CheckoutProcess.mjs"; // Importa la clase CheckoutProcess
 import { loadHeaderFooter } from "./utils.mjs";
-import { CheckoutProcess } from "./CheckoutProcess.mjs";
 
 loadHeaderFooter();
+// Asegura que el codigo se ejecute despues que el DOM este listo
+document.addEventListener("DOMContentLoaded", () => {
+  // Crea una nueva instancia de CheckoutProcess
+  const checkoutProcess = new CheckoutProcess("so-cart", ".orderSummary"); // 'so-cart' es la clave en localStorage, '.orderSummary' es el selector para el contenedor donde se mostrarán los totales.
 
-const order = new CheckoutProcess("so-cart", ".checkout-summary");
-order.init();
+  // Inicializa el proceso de checkout
+  checkoutProcess.init();
 
-// Add event listeners to fire calculateOrderTotal when the user changes the zip code
-document
-  .querySelector("#zip")
-  .addEventListener("blur", order.calculateOrderTotal.bind(order));
+  // Select the checkout form
+  const checkoutForm = document.querySelector("#checkoutForm");
 
-// listening for click on the button
-document.querySelector("#checkoutSubmit").addEventListener("click", (e) => {
-  e.preventDefault();
-
-  order.checkout();
+  // Attach event listener for form submission
+  checkoutForm.addEventListener("submit", (event) => {
+    checkoutProcess.handleCheckoutFormSubmit(event);
+  });
 });
