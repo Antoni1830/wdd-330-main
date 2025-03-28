@@ -44,28 +44,12 @@
         <fieldset class="summary">
           <h3>Order Summary</h3>
 
-          <div class="order-summary">
-            <div class="con">
-              <div class="label">Items</div>
-            <div id="num-items"></div>
-            </div>
-            
-            <div class="con">
-               <div class="label">Subtotal</div>
-            <div id="cartTotal"></div>
-            </div>
-            <div class="con">
-              <div class="label">Tax</div>
-            <div id="tax"></div>
-            </div>
-            <div class="con">
-              <div class="label">Shipping</div>
-            <div id="shipping"></div>
-            </div>
-            <div class="con">
-              <div class="label">Total</div>
-            <div id="orderTotal"></div>
-            </div>
+          <div class="orderSummary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <p>Tax: <span id="tax"></span></p>
+            <p>Shipping Estimate: <span id="shippingEstimate"></span></p>
+            <p>Order Total: <span id="orderTotal"></span></p>
           </div>
         </fieldset>
         <input id="checkoutSubmit" type="submit" value="Checkout Items">
