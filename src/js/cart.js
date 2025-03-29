@@ -8,7 +8,7 @@ function renderCartContents() {
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
 // Total Cart Price
-function calculateTotalPrice(){
+function calculateTotalPrice() {
   let cartProducts = getLocalStorage("so-cart") || [];
   let totalAmount = cartProducts.reduce((sum, product) => {
     return sum + (product.FinalPrice || 0);
